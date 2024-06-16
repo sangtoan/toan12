@@ -37,7 +37,7 @@
     a:hover {
       text-decoration: underline;
     }
-    iframe {
+    .pdf-viewer {
       width: 100%;
       height: 100%;
       border: none;
@@ -45,7 +45,43 @@
   </style>
   <script>
     function showPDF(url) {
-      document.getElementById('pdfViewer').src = url;
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.responseType = 'arraybuffer';
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var pdfData = new Uint8Array(xhr.response);
+          var pdfjsLib = window['pdfjs-dist/build/pdf'];
+          pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.worker.min.js';
+          var loadingTask = pdfjsLib.getDocument({data: pdfData});
+          loadingTask.promise.then(function(pdf) {
+            console.log('PDF loaded');
+            pdf.getPage(1).then(function(page) {
+              console.log('Page loaded');
+              var scale = 1.5;
+              var viewport = page.getViewport({scale: scale});
+              var canvas = document.createElement('canvas');
+              var context = canvas.getContext('2d');
+              canvas.height = viewport.height;
+              canvas.width = viewport.width;
+              var renderContext = {
+                canvasContext: context,
+                viewport: viewport
+              };
+              var renderTask = page.render(renderContext);
+              renderTask.promise.then(function() {
+                console.log('Page rendered');
+                var contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = '';
+                contentDiv.appendChild(canvas);
+              });
+            });
+          }, function(reason) {
+            console.error(reason);
+          });
+        }
+      };
+      xhr.send();
     }
     document.addEventListener("DOMContentLoaded", function() {
       var toggler = document.getElementsByClassName("caret");
@@ -78,6 +114,7 @@
       display: block;
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
 </head>
 <body>
   <div id="sidebar">
@@ -85,22 +122,30 @@
     <ul id="tree">
       <li><span class="caret">Chương 1</span>
         <ul class="nested">
-          <li><a href="#" onclick="showPDF('chuong_1/bai_1_1.pdf')">Bài 1.1</a></li>
-          <li><a href="#" onclick="showPDF('chuong_1/bai_1_2.pdf')">Bài 1.2</a></li>
-          <li><a href="#" onclick="showPDF('chuong_1/bai_1_3.pdf')">Bài 1.3</a></li>
+          <li><span class="caret">Bài 1</span>
+            <ul class="nested">
+              <li><a href="#" onclick="showPDF('chuong_1/bai_1/bai_1_1.pdf')">Bài 1.1</a></li>
+              <li><a href="#" onclick="showPDF('chuong_1/bai_1/bai_1_2.pdf')">Bài 1.2</a></li>
+              <li><a href="#" onclick="showPDF('chuong_1/bai_1/bai_1_3.pdf')">Bài 1.3</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
       <li><span class="caret">Chương 2</span>
         <ul class="nested">
-          <li><a href="#" onclick="showPDF('chuong_2/bai_2_1.pdf')">Bài 2.1</a></li>
-          <li><a href="#" onclick="showPDF('chuong_2/bai_2_2.pdf')">Bài 2.2</a></li>
-          <li><a href="#" onclick="showPDF('chuong_2/bai_2_3.pdf')">Bài 2.3</a></li>
+          <li><span class="caret">Bài 2</span>
+            <ul class="nested">
+              <li><a href="#" onclick="showPDF('chuong_2/bai_2/bai_2_1.pdf')">Bài 2.1</a></li>
+              <li><a href="#" onclick="showPDF('chuong_2/bai_2/bai_2_2.pdf')">Bài 2.2</a></li>
+              <li><a href="#" onclick="showPDF('chuong_2/bai_2/bai_2_3.pdf')">Bài 2.3</a></li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
   </div>
   <div id="content">
-    <iframe id="pdfViewer" src=""></iframe>
+    <div class="pdf-viewer"></div>
   </div>
 </body>
 </html>
