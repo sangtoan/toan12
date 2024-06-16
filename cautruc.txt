@@ -1,0 +1,58 @@
+toan/
+├── toan10
+│   ├── chuong_1
+│   │   ├── bai_1
+│   │   │   ├── bai_1_1.pdf
+│   │   │   ├── bai_1_2.pdf
+│   │   │   └── bai_1_3.pdf
+│   │   ├── bai_2
+│   │   │   ├── bai_2_1.pdf
+│   │   │   ├── bai_2_2.pdf
+│   │   │   └── bai_2_3.pdf
+│   ├── chuong_2
+│       ├── bai_1
+│           ├── bai_1_1.pdf
+│           ├── bai_1_2.pdf
+│           └── bai_1_3.pdf
+│       ├── bai_2
+│           ├── bai_2_1.pdf
+│           ├── bai_2_2.pdf
+│           └── bai_2_3.pdf
+├── toan11
+│   ├── chuong_1
+│   │   ├── bai_1
+│   │   │   ├── bai_1_1.pdf
+│   │   │   ├── bai_1_2.pdf
+│   │   │   └── bai_1_3.pdf
+│   │   ├── bai_2
+│   │   │   ├── bai_2_1.pdf
+│   │   │   ├── bai_2_2.pdf
+│   │   │   └── bai_2_3.pdf
+│   ├── chuong_2
+│       ├── bai_1
+│           ├── bai_1_1.pdf
+│           ├── bai_1_2.pdf
+│           └── bai_1_3.pdf
+│       ├── bai_2
+│           ├── bai_2_1.pdf
+│           ├── bai_2_2.pdf
+│           └── bai_2_3.pdf
+├── toan12
+│   ├── chuong_1
+│   │   ├── bai_1
+│   │   │   ├── bai_1_1.pdf
+│   │   │   ├── bai_1_2.pdf
+│   │   │   └── bai_1_3.pdf
+│   │   ├── bai_2
+│   │   │   ├── bai_2_1.pdf
+│   │   │   ├── bai_2_2.pdf
+│   │   │   └── bai_2_3.pdf
+│   ├── chuong_2
+│       ├── bai_1
+│           ├── bai_1_1.pdf
+│           ├── bai_1_2.pdf
+│           └── bai_1_3.pdf
+│       ├── bai_2
+│           ├── bai_2_1.pdf
+│           ├── bai_2_2.pdf
+│           └── bai_2_3.pdf
