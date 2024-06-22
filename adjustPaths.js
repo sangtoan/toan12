@@ -4,14 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     images.forEach(img => {
         let src = img.getAttribute("src");
-        // Kiểm tra nếu src bắt đầu bằng "../../"
-        if (src.startsWith("../../")) {
+        // Kiểm tra nếu src bắt đầu bằng "../../khohinh"
+        if (src.startsWith("../../khohinh")) {
             // Điều chỉnh src để phù hợp với GitHub Pages
             src = src.replace("../../khohinh", "https://raw.githubusercontent.com/sangtoan/toan12/main/khohinh");
-            img.setAttribute("src", src);
-        } else if (src.startsWith("/khohinh")) {
-            // Điều chỉnh src để phù hợp với GitHub Pages khi dùng đường dẫn tuyệt đối
-            src = src.replace("/khohinh", "https://raw.githubusercontent.com/sangtoan/toan12/main/khohinh");
             img.setAttribute("src", src);
         }
     });
