@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Lấy tất cả các thẻ img
+    // Lấy tất cả các thẻ img trong nội dung
     const images = document.querySelectorAll("img");
 
     images.forEach(img => {
