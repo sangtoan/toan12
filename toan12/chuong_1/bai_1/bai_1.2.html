@@ -1,0 +1,261 @@
+\begin{dang}{$m$ để hàm số $y=ax^3+bx^2+cx+d$ đồng biến (hoặc nghịch biến) trên  $R$ }
+	\begin{enumerate}
+	\item Trường hợp $a$ không chứa tham số $m$:
+	\begin{itemize}
+	\item Hàm số đồng biến trên $\mathbb{R}$ thì $y'\geq 0$, $\forall x\in\mathbb{R}\Leftrightarrow \begin{cases} a > 0\\ \Delta_{y'}\leq 0.\end{cases}$
+	\item Hàm số nghịch biến trên $\mathbb{R}$ thì $y'\leq 0$, $\forall x\in\mathbb{R}\Leftrightarrow \begin{cases} a < 0\\ \Delta_{y'}\leq 0.\end{cases}$
+	\end{itemize}
+	\item Trường hợp $a$ chứa tham số $m$:
+	\begin{itemize}
+	\item Xét $a=0\Rightarrow m=?$ thế trực tiếp giá trị $m$ vào hàm số.
+	\item Xét $a\neq 0$ (trở về trường hợp $(1)$ đã xét ở trên).
+	\end{itemize}
+	\end{enumerate}
+\end{dang}
+\subsubsection{Ví dụ minh họa}
+\begin{vd}%[DTH, Sở GD và ĐT - Hà Nam, 2019]%[Đào-V- Thủy, 12EX5]%[2D1B1-3]
+	Tìm giá trị lớn nhất của tham số $m$ để hàm số $y= \dfrac{1}{3}x^3- mx^2+ (8+2m)x+ m+ 3$ đồng biến trên $\mathbb{R}$.
+	\loigiai{
+        Hàm số $y=ax^3+bx^2+cx+d$\\
+		$\bullet$ $y'=3ax^2+2bx+c$.\\
+		$\bullet$ Biệt thức $\Delta'=b^2-3ac$.\\
+		Ta có $y'= x^2- 2mx + (8-2m)$.\\ Hàm số đồng biến trên $\mathbb{R}$ thì $y' \ge 0\, \forall x\in \mathbb{R}\Leftrightarrow \Delta \le 0\Leftrightarrow m^2+ 2m- 8\le 0\Leftrightarrow -4\le m\le 2$.\\
+		Vậy giá trị lớn nhất của $m$ để hàm số đồng biến trên $\mathbb{R}$ là $m=2$.	
+	}
+\end{vd}
+\begin{vd}%[Thi thử THPT Lê Hồng Phong, 2018]%[Ngô Thị Loan, 12EX4]%[2D1B1-3]
+	Có bao nhiêu số nguyên $ m $ để hàm số $ y=mx^3-3mx^2+2(m-1)x+1 $ nghịch biến trên $ \mathbb{R} $?
+	\loigiai{
+			$\bullet$ Cần xét $2$ trường hợp $m=0$ và $m\neq 0$.\\
+			$\bullet$ Kết quả của bài toán là gộp kết quả của $2$ trường hợp.\\   
+            \begin{ghichu}
+            Đường thẳng $y=ax+b$ đồng biến khi  $a > 0$ , nghịch biến khi $a < 0$.
+            \end{ghichu} 
+		Khi $m=0$, hàm số thành $y=-2x+1$ luôn nghịch biến trên $ \mathbb{R} $.\\ 
+        Vậy $m=0$ là một giá trị cần tìm.\\
+		Khi $m\neq 0$, ta có $ y'=3mx^2-6mx+2(m-1)$.\\
+		Để hàm số nghịch biến trên $ \mathbb{R} $ thì $ y'\leq 0 $ với $\forall x\in \mathbb{R} $ hay\\
+$\begin{cases} 3m < 0\\ \Delta'=9m^2-6m(m-1)\leq 0 \end{cases}$\\
+$\Leftrightarrow$ $\begin{cases}m < 0 \\ 3m(m+2) \leq 0 \end{cases}$\\
+$\Leftrightarrow$ $-2 \leq m  < 0$\\
+Gộp $2$ trường hợp lại ta được $-2 \leq m \leq 0$.\
+Do $ m\in \mathbb{Z} \Rightarrow min {-2;-1;0} $.
+	}
+     
+\end{vd}
+\begin{vd}%[Đề Tập Huấn -4, Sở GD và ĐT - Hải Phòng, 2019]%[Trần Xuân Thiện, 12EX10]%[2D1Y1-3]
+	Với giá trị nào của $m$ thì hàm số $y = x^3 - 3mx^2 + 3x - 1$ đồng biến trên $\mathbb{R}$?
+	\loigiai{
+	Tập xác định: $ \mathscr{D} = \mathbb{R}$.\\
+	Ta có $y' = 3x^2 - 6mx + 3$.\\
+	Hàm số đã cho đồng biến trên $\mathbb{R}$ khi\\
+	$ y' \leq 0, \forall x \in \mathbb{R} \Leftrightarrow \begin{cases} a > 0\\ \Delta \leq 0 \end{cases} \Leftrightarrow \begin{cases} 3 > 0\\ 36m^2 - 36 \leq 0 \end{cases} \Leftrightarrow -1 \leq m \leq 1$.
+	}
+\end{vd}
+
+\begin{vd}%[Đề kiểm tra định kỳ, THPT Nguyễn Huệ - Huế, 2019]%[Bùi Quốc Hoàn, dự án EX9]%[2D1B1-3]
+	Tìm tập hợp $S$ gồm tất cả các giá trị thực của tham số $m$ sao cho hàm số \\ $$y = -\dfrac{1}{3}x^3 - mx^2 + \left(2m - 3\right)x - m + 2$$ luôn nghịch biến trên $\mathbb{R}$
+	\loigiai{Tập xác định của hàm số $\mathscr{D} = \mathbb{R}$.\\
+	Ta có $y' = - x^2 - 2mx + \left(2m - 3\right)$.\\
+	Để thỏa mãn bài toán khi $y'\leq 0\ \forall x\in\mathbb{R}$ suy ra
+	$- x^2 - 2mx + \left(2m - 3\right)\leq 0\ \forall x\in\mathbb{R}$.\\
+	Khi đó $\Delta'\leq 0\Leftrightarrow m^2 + 2m - 3\leq 0\Leftrightarrow - 3\leq m\leq 1$.\\
+	Vậy tập hợp $S = \left[-3; 1\right]$.
+	}
+\end{vd}
+\subsubsection{Câu hỏi trắc nghiệm}
+
+\begin{ex}%[GHK1, THPT Nhân Chính - Hà Nội, 2018 - 2019]%[Phan Văn Thành, 12EX2 - 2019]%[2D1B1-3]
+	Tìm tất cả các giá trị của $m$ để hàm số $y = \dfrac{x^3}{3} - (m - 1)x^2 + 2(m - 1)x + 2$ đồng biến trên tập xác định của nó.
+	\choice
+	{$1  <  m  <  3$}
+	{$m \geq 1$}
+	{\True $1 \leq m \leq 3$}
+	{$m \leq 3$}
+	\loigiai{Tập xác định của hàm số là $\mathscr{D} = \mathbb{R}$.\\
+	Ta có $y' = x^2 - 2(m - 1)x + 2(m - 1)$.\\
+	Hàm số đồng biến trên $\mathbb{R}$ khi và chỉ khi $y' \geq 0 \,\, \forall x \in \mathbb{R}$.\\
+	Hay $\Delta' = (m - 1)^2 - 2(m - 1) \leq 0 \Leftrightarrow (m - 1)(m - 3) \leq 0 \Leftrightarrow 1 \leq m \leq 3$.
+	}
+\end{ex}
+\begin{ex}%[GHK1 Toán 12, Nguyễn Chí Thanh, HCM, 2018-2019]%[Vũ Nguyễn Hoàng Anh, 12EX2-19]%[2D1B1-3]
+	Cho hàm số $y=-x^3-mx^2+(4m+9)x+5$. Có bao nhiêu giá trị nguyên của $m$ để hàm số nghịch biến trên $\mathbb{R}$?
+	\choice
+	{$4$}
+	{\True $7$}
+	{$5$}
+	{$6$}
+	\loigiai{
+	Ta có $y'=-3x^2-2mx+(4m+9)$. Hàm số đã cho nghịch biến trên $\mathbb{R}$ khi và chỉ khi
+	\[ \Delta'\le 0 \Leftrightarrow m^2+12m+27\le 0 \Leftrightarrow -9\le m\le -3. \]
+	Vậy có tất cả $7$ giá trị nguyên của $m$ thỏa mãn bài toán.
+	}
+\end{ex}
+\begin{ex}%[Đề KSCL Toán 12, THPT Yên Mỹ – Hưng Yên lần 1, 2019]%[Cao Thành Thái, 12EX-2-2019]%[2D1K1-3]
+	Cho hàm số $y= \dfrac{1}{3}(m^2-1)x^3 + (m+1)x^2 + 3x - 1$, với $m$ là tham số. Số giá trị nguyên của tham số $m$ thuộc $[-2018;2018]$ để hàm số đồng biến trên $\mathbb{R}$ là
+	\choice
+	{\True $4035$}
+	{$4037$}
+	{$4036$}
+	{$4034$}
+	\loigiai{
+	Tập xác định của hàm số là $\mathscr{D}=\mathbb{R}$.\\
+	Ta có $y'=(m^2-1)x^2+2(m+1)x+3$.
+	\begin{itemize}
+	\item Khi $m=-1$ ta được $y'=3>0,\forall x \in \mathscr{D}$ nên hàm số luôn đồng biến trên $\mathbb{R}$. Vậy $m=-1$ là một giá trị thỏa mãn yêu cầu bài toán.
+	\item Khi $m=1$ ta được $y'=4x+3>0,\forall x \in \left(-\dfrac{3}{4};+\infty\right)$ nên hàm số đồng biến trên $\left(-\dfrac{3}{4};+\infty\right)$. Vậy $m=1$ là giá trị không thỏa mãn yêu cầu bài toán.
+	\item Khi $m\neq \pm 1$, hàm số luôn đồng biến trên $\mathbb{R}$ khi và chỉ khi $y' \geq 0, \forall x \in \mathbb{R}$, tức là
+	$\begin{cases} m^2-1 >0 \\(m+1)^2-3(m^2-1)\leq 0 \end{cases} \Leftrightarrow \begin{cases} m^2-1 >0 \\-2m^2+2m+4\leq 0 \end{cases}$\\
+    $\Leftrightarrow  \begin{cases}m < -1 \\m\geq 2 \end{cases}$\\
+	Vì $m \in [-2018;2018]$ nên $m \in \{-2018;-2017;-2016;\ldots;-3;-2;2;3;4;\ldots;2017;2018\}$.
+	\end{itemize}
+	Kết hợp ba trường hợp ta được $m \in \{-2018;-2017;-2016;\ldots;-3;-2;-1;2;3;4;\ldots;2017;2018\}$.\\
+	Vậy có tất cả $4035$ giá trị nguyên của $m$ thuộc $[-2018;2018]$ thỏa mãn yêu cầu bài toán.
+	}
+\end{ex}
+
+\begin{dang}{Tính đơn điệu của hàm số phân thức bậc nhất}
+	\begin{enumerate}
+	\item Tập xác định: $\mathscr{D}=\mathbb{R} \setminus \left\{-\dfrac{d}{c} \right\}$.
+	\item Đạo hàm: $y'=\dfrac{a\cdot d-c\cdot b}{(c x+d)^2}$. 
+	\end{enumerate}
+\textbf{Bài toán 1. Tìm $m$ để hàm số $y=\dfrac{ax+b}{cx+d}$ đơn điệu trên từng khoảng xác định}
+\begin{itemize}
+	\item Hàm số đồng biến trên từng khoảng xác định của nó $\Leftrightarrow y' > 0\Leftrightarrow a\cdot d-c\cdot b > 0$.
+	\item Hàm số nghịch biến trên từng khoảng xác định của nó $\Leftrightarrow y'  <  0\Leftrightarrow a\cdot d-c\cdot b  <  0$. 
+\end{itemize}
+\textbf{Bài toán 2. Tìm $m$ để hàm số $y=\dfrac{ax+b}{cx+d}$ đơn điệu trên $( \alpha ; \beta ) \subset \mathbb { R } \backslash \left\{ - \dfrac { d } { c } \right\}$}
+	\begin{itemize}
+	\item Hàm số đồng biến trên khoảng $( \alpha ; \beta )\Leftrightarrow \begin{cases} y'>0\\-\dfrac{d}{c}\notin ( \alpha ; \beta ) \end{cases}\Leftrightarrow \begin{cases} a\cdot d-c\cdot b'>0\\-\dfrac{d}{c}\leq\alpha\;\text{hoặc}\;-\dfrac{d}{c}\geq \beta. \end{cases}$
+	\item Hàm số nghịch biến trên khoảng $( \alpha ; \beta )\Leftrightarrow \begin{cases} y' < 0\\-\dfrac{d}{c}\notin ( \alpha ; \beta ) \end{cases}\Leftrightarrow \begin{cases} a\cdot d-c\cdot b' < 0\\-\dfrac{d}{c}\leq\alpha\;\text{hoặc}\;-\dfrac{d}{c}\geq \beta. \end{cases}$
+\end{itemize}
+\subsubsection{Ví dụ minh họa}
+\begin{vd}%[2-GHK1-19-THPTQuangTrung-HaiPhong]%[Trần Minh-Dự án 12-EX-2-2019]%[2D1B1-3]
+	Tìm tất cả các giá trị của tham số $m$ để hàm số $y=\dfrac{mx+2}{2x+m}$ đồng biến trên mỗi khoảng xác định của hàm số.
+	\loigiai{
+	Với $y=\dfrac{mx+2}{2x+m}$ $(1)$ ta có $y'=\dfrac{m^2-4}{(2x+m)^2}$.\\
+	Hàm số $(1)$ đồng biến trên mỗi khoảng của tập xác định $ \Leftrightarrow y'>0,\, \forall x\neq -\dfrac{m}{2}$ $$ \Leftrightarrow m^2-4>0 \Leftrightarrow m>2 \text{ hoặc } m < -2.$$}
+\end{vd}
+\begin{vd}%[Đề thi khảo sát chất lượng trường THCS-THPT Lômônôxốp, Hà Nội 2018 ,Nhật Thiện 12EX1-2019]%[2D1B1-3]
+	Tìm tất cả các giá trị của m để hàm số $y=\dfrac{mx+4m-8}{x+2}$ luôn nghịch biến trên mỗi khoảng xác định của hàm số.
+	\loigiai{
+	Ta có $y'=\dfrac{2m-4m+8}{(x+2)^2}$. Để hàm số luôn nghịch biến trên mỗi khoảng xác định thì $$2m-4m+8 < 0\Leftrightarrow -2m+8 < 0\Leftrightarrow m>4.$$
+	}
+\end{vd}
+\begin{vd}%[Đề kiểm tra định kỳ, THPT Nguyễn Huệ - Huế, 2019]%[Bùi Quốc Hoàn, dự án EX9]%[2D1B1-3]
+	Gọi $S$ là tập hợp các giá trị nguyên của tham số $m$ sao cho hàm số $y = \dfrac{x - 1}{x - m}$ nghịch biến trên khoảng $\left(4; + \infty\right)$. Tính tổng $P$ của các giá trị $m$ của $S$.
+	\loigiai{Tập xác định $\mathscr{D} = \mathbb{R}\setminus\left\{m\right\}$.\\
+	Ta có $y' = \dfrac{\left(x - m\right) - \left(x - 1\right)}{\left(x - m\right)^2} = \dfrac{1 - m}{\left(x - m\right)^2}$.\\
+	Để thỏa mãn bài toán khi $\heva{&y'  <  0\\ &m\notin\left(4;+\infty\right)}\Leftrightarrow \heva{&1 - m  <  0\\ &m\leq 4}\Leftrightarrow \begin{cases} m > 1 \\ m\leq 4 \end{cases}\Leftrightarrow 1  <  m\leq 4$.\\
+	Do $m\in\mathbb{Z}$ suy ra $m = 2$, $m = 3$ và $m = 4$.\\
+	Khi đó $S = 2 + 3 + 4 = 9$.
+	}
+\end{vd}
+\begin{vd}%[Thi thử lần 1, Ngô Sĩ Liên, Bắc Giang 2019]%[Đoàn Nhật Thiện, 12-EX3-2019]%[2D1B1-3]
+	Cho hàm số $y=\dfrac{mx+4}{x+m}$. Tìm các giá trị của $m$ để hàm số đồng biến trên $(2;+\infty)$.
+	\loigiai{
+	Tập xác định $\mathscr{D}=\mathbb{R}\setminus \{-m\}$.\\
+	Ta có $y'=\dfrac{m^2-4}{(x-m)^2}$. Để hàm số đồng biến trên khoảng $(2;+\infty)$ thì $$\begin{cases} -m\le 2\\ m^2-4>0 \end{cases}\Leftrightarrow\begin{cases} m\ge -2\\ m < -2 \text{ hoặc } m>2 \end{cases}\Leftrightarrow m>2.$$
+	}
+\end{vd}
+\begin{bt}%[Đề kiểm tra định kỳ, THPT Nguyễn Huệ - Huế, 2019]%[Bùi Quốc Hoàn, dự án EX9]%[2D1B1-3]
+	Có bao nhiêu giá trị nguyên của tham số $m$ để hàm số $y = \dfrac{mx + 1}{4x + m}$ luôn nghịch biến trên từng khoảng xác định của hàm số?
+	\loigiai{Tập xác định $\mathscr{D} = \mathbb{R}\setminus\left\{- \dfrac{m}{4}\right\}$.\\
+	Ta có $y' = \dfrac{m\left(4x + m\right) - 4\left(mx + 1\right)}{\left(4x + m\right)^2} = \dfrac{m^2 - 4}{\left(4x + m\right)^2}$.\\
+	Để thỏa mãn bài toán khi $m^2 - 4  <  0\Leftrightarrow - 2  <  m  <  2$.\\
+	Do $m$ nguyên suy ra $m = - 1$, $m = 0$ và $m = 1$. Vậy có $3$ giá trị của $m$ thỏa mãn.
+	}
+\end{bt}
+\begin{bt}%[Kiểm tra khảo sát L1, Lý Thánh Tông, Hà Nội, 2019]%[Đặng Tân Hoài, 12-EX-2-2019]%[2D1B1-3]
+	Cho hàm số $y=\dfrac{mx-2m-3}{x-m}$ với $m$ là tham số. Gọi $S$ là tập hợp tất cả các giá trị nguyên của $m$ để hàm số đồng biến trên các khoảng xác định. Tìm số phần tử của $S$.
+	\loigiai{Tập xác định là $\mathscr{D}=\mathbb{R} \setminus \{m\}$.
+	Ta có $y'=\dfrac{-m^2+2m+3}{(x-m)^2}$. Hàm số đã cho đồng biến trên các khoảng xác định khi và chỉ khi $y'>0,~\forall x \neq m \Leftrightarrow -m^2+2m+3>0 \Leftrightarrow -1 < m < 3$.\\
+	Kết hợp $m \in \mathbb{Z}$ ta được $m \in \left\{0;1;2\right\}$.\\
+	Vậy số phần tử của tập $S$ là $3$.
+	}
+\end{bt}
+\begin{bt}%[Thi thử L1, Liên trường THPT Thành phố Vinh - Nghệ An, 2019]%[Đinh Thanh Hoàng, 12-EX-5-2019]%[2D1B1-3]
+Tìm tất cả các giá trị thực của $m$ để hàm số $y=\dfrac{3x-1-2m}{x-m}$ nghịch biến trên khoảng $(5; +\infty)$.
+	\loigiai{
+	Tập xác định $\mathscr{D}=\mathbb{R}\setminus\{m\}$.\\
+	Ta có $y'=\dfrac{1-m}{(x-m)^2}$.\\
+	Hàm số đã cho nghịch biến trên khoảng $(5; +\infty)\Leftrightarrow \begin{cases} 1-m < 0 \\ m\leq 5 \end{cases}\Leftrightarrow 1 < m \leq 5$.
+	}
+\end{bt}
+\begin{bt}%[HKI, THPT Mạc Đĩnh Chi - Hồ Chí Minh, 2019]%[Duong Xuan Loi, 12EX6-19]%[2D1B1-3]
+	Có bao nhiêu giá trị nguyên của tham số $m$ để hàm số $y=\dfrac{x+1}{x+3m}$ nghịch biến trên khoảng $(6;+\infty)$?
+	\loigiai{
+		Tập xác định $\mathscr{D}=\mathbb{R}\setminus\{-3m\}$.\\
+		$y'=\dfrac{3m-1}{(x+3m)^2}$.\\
+		Để hàm số nghịch biến trên khoảng $(6;+\infty)$ thì $\heva{& 3m-1 < 0 \\ & -3m\notin(6;+\infty)}  \begin{cases} m < \dfrac{1}{3} \\   m\ge -2 \end{cases} \Leftrightarrow m\in \left[-2;\dfrac{1}{3}\right)$.\\
+		Vì $m$ nguyên nên $m\in \{-2;-1;0\}$.
+	}
+\end{bt}
+\begin{bt}%[Thi thử, Sở GD và ĐT - Thanh Hóa, 2019]%[Lê Đạt, 12EX6]%[2D1B1-3]
+	Cho hàm số $ y= \dfrac{x-2}{x-m} $. Tìm các giá trị của tham số $ m $ để hàm số đồng biến trên $ (0;3] $.
+	\loigiai{
+		Tập xác định $ \mathscr{D}=\mathbb{R}\setminus{\{m\}} $.\\
+		Ta có $ y'=\dfrac{2-m}{(x-m)^2} $.\\
+		Để hàm số đồng biến trên $ (0;3] $ thì $ \begin{cases} 2-m>0\\ m\notin (0;3] \end{cases} \Leftrightarrow m\le 0 $.
+	}
+\end{bt}
+\subsubsection{Câu hỏi trắc nghiệm}
+\begin{ex}%[Kiểm tra giữa học kì I, Nguyễn Tất Thành, 2019]%[Nguyễn Kiều Nhã Tú, dự án EX2]%[2D1Y1-3]
+	Tìm $m$ để hàm số $y = \dfrac{mx+5}{2x+1}$ đồng biến trên từng khoảng xác định.
+	\choice
+	{$m > -\dfrac{1}{2}$}
+	{$m > -10$}
+	{$m  <  10$}
+	{\True $m > 10$}
+	\loigiai{
+		Tập xác định của hàm số là $\mathscr{D}=\mathbb{R}\setminus\{-\dfrac{1}{2}\}$.\\
+		Ta có $y'(x) = \dfrac{m - 10}{(2x+1)^2}, \forall x \in \mathscr{D}$.\\
+		Vì vậy, hàm số đồng biến trên từng khoảng xác định khi và chỉ khi $m - 10 > 0$, hay $m > 10$.
+	}
+\end{ex}
+\begin{ex}%[Thi thử, THPT Bình Minh - Ninh Bình, 2019]%[Lê Quốc Hiệp, 12EX3-2019]%[2D1B1-3]
+	Tìm tất cả giá trị thực của tham số $m$ để hàm số $y=\dfrac{x+2-m}{x+1}$ nghịch biến trên các khoảng mà nó xác định.
+	\choice
+	{$m\le1$}
+	{\True $m < 1$}
+	{$m < -3$}
+	{$b\le-3$}
+	\loigiai
+	{
+		Tập xác định của hàm số đã cho là $\mathscr{D}=\mathbb{R}\setminus\{-1\}$.\\
+		Ta có $y'=\dfrac{m-1}{(x+1)^2}$.\\
+		Để hàm số đã cho nghịch biến trên các khoảng mà nó xác định thì
+		\[y' < 0,~\forall x\in\mathscr{D}\Leftrightarrow m-1 < 0\Leftrightarrow m < 1.\]
+	}
+\end{ex}
+\begin{ex}%[HK1, Gia Định, HCM, 2019][Lê Văn Thiện, 12-EX-4-2019]%[2D1B1-3]
+	Có bao nhiêu giá trị nguyên của tham số $m$ để hàm số $y=\dfrac{x+2}{x+5m}$ đồng biến trên khoảng $(-\infty;-10)$?
+	\choice
+	{Vô số}
+	{$1$}
+	{\True $2$}
+	{$3$}
+	\loigiai{
+	Tập xác định $\mathscr{D}=\mathbb{R}\setminus \{-5m\}$.\\
+	Hàm số $y=\dfrac{x+2}{x+5m}$ đồng biến trên khoảng $(-\infty;-10)$ khi và chỉ khi \\
+	$\begin{cases} y'>0\\ -5m\notin (-\infty;-10) \end{cases} \Leftrightarrow  \begin{cases} y'=\dfrac{5m-2}{(x+5m)^2}>0\\ -5m\ge-10 \end{cases}\Leftrightarrow \begin{cases} m>\dfrac{2}{5}\\ m\le 2 \end{cases}\Leftrightarrow \dfrac{2}{5} < m\le 2$.\\
+	Vậy có $2$ giá trị nguyên của $m$.
+	}
+\end{ex}
+
+\begin{ex}%[DTH, Sở GD và ĐT - Hà Nam, 2019]%[Đào-V- Thủy, 12EX5]%[2D1K1-3]
+	Cho hàm số $y= \dfrac{mx+2}{2x+m}$, với $m$ là tham số thực. Gọi $S$ là tập hợp tất cả các giá trị nguyên của tham số $m$ để hàm số nghịch biến trên khoảng $(0;1)$. Tìm số phần tử của $S$.
+	\choice
+	{$1$}
+	{$5$}
+	{\True $2$}
+	{$3$}
+	\loigiai{
+	TXĐ: $D= \mathbb{R} \setminus \left\{-\dfrac{m}{2}\right\}$.\\
+    Ta có $y'= \dfrac{m^2- 4}{(2x+m)^2}$. Khi đó\\
+	$
+	\text{YCBT} \Leftrightarrow \begin{cases} m^2-4  <  0 \\  \dfrac{-m}{2} \notin (0;1) \end{cases}$\\
+    $ \Leftrightarrow \begin{cases} -2 <  m <  2\\  \left[\begin{array}{l} \dfrac{-m}{2}\le 0\\  \dfrac{-m}{2} \ge 1 \end{array}\right. \end{cases} $\\
+    $\Leftrightarrow \begin{cases} -2 <  m <  2\\  \left[\begin{array}{l} m\ge 0\\  m \le -2 \end{array}\right. \end{cases} \Leftrightarrow 0\le m <  2 \Rightarrow m\in \left\{0; 1\right\}.	$
+	}
+\end{ex}
